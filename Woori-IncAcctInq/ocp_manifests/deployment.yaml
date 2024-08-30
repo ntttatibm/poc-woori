@@ -1,0 +1,48 @@
+# image name: woori.com.kh/ibm-poc/incacctinq:latest
+# ACE version: 12.0.7.0-r5
+
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  name: woori-incacctinq
+  labels:
+    project-scope: poc
+  namespace: poc-ace
+spec:
+  license:
+    accept: true
+    license: L-MSST-58UM6D
+    use: AppConnectEnterpriseNonProductionFREE
+  version: 12.0.7.0-r5
+  pod:
+    automountServiceAccountToken: false
+    containers:
+      runtime:
+        imagePullPolicy: IfNotPresent
+        image: woori.com.kh/ibm-poc/incacctinq:latest
+        resources:
+          limits:
+            cpu: 1
+            memory: 2Gi
+          requests:
+            cpu: 500m
+            memory: 1Gi
+  env:
+    - name: TZ
+      value: Asia/Phnom_Penh
+    - name: MQSI_FILENODES_ROOT_DIRECTORY
+      value: /home/aceuser
+    - name: LANG
+      value: en_US.utf-8
+    - name: LC_ALL
+      value: en_US.utf-8
+  router:
+    timeout: 120s
+  disableRoutes: true
+  service:
+    endpointType: http
+  adminServerSecure: true
+  createDashboardUsers: false
+  designerFlowsOperationMode: disabled
+  enableMetrics: true
+  replicas: 1
