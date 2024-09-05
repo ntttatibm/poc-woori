@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "senderAccount": {
+      "type": "string"
+    },
+    "receiverAccountId": {
+      "type": "string"
+    },
+    "receiverName": {
+      "type": "string"
+    },
+    "tranAmount": {
+      "type": "string"
+    },
+    "tranCurrency": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "purposeOther": {
+      "type": "string"
+    },
+    "fee_currency": {
+      "type": "string"
+    },
+    "fee_amount": {
+      "type": "string"
+    },
+    "senderName": {
+      "type": "string"
+    },
+    "serviceId": {
+      "type": "string"
+    },
+    "merchantType": {
+      "type": "string"
+    },
+    "qrCode": {},
+    "company": {
+      "type": "string"
+    },
+    "senderAccountCcy": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "senderAccount",
+    "receiverAccountId",
+    "receiverName",
+    "tranAmount",
+    "tranCurrency",
+    "purpose",
+    "purposeOther",
+    "fee_currency",
+    "fee_amount",
+    "senderName",
+    "serviceId",
+    "merchantType",
+    "qrCode",
+    "company",
+    "senderAccountCcy"
+  ]
+}

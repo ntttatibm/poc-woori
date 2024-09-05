@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <input derivedFrom="MB:JSON_schema_in_json_file" path="/wallet_transfer_request.schema.json" var="var"/>
+    <output path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var3"/>
+    <output derivedFrom="MB:JSON_schema_in_json_file" path="/ptbridge_wallet_request.schema.json" var="var2"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="Wallet_transfer_WalletTransferMapping">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly">
+            <cast derivedFrom="MB:JSON_TYPE" path="$MessageAssembly/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}wallet_transfer_request.schema_JsonType" ref="var"/>
+        </input>
+        <output namespace="http://www.ibm.com/iib/msl/json" path="$var3/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly1">
+            <cast derivedFrom="MB:JSON_TYPE" path="$MessageAssembly1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}ptbridge_wallet_request.schema_JsonType" ref="var2"/>
+        </output>
+        <move>
+            <input path="$MessageAssembly/Properties"/>
+            <output path="$MessageAssembly1/Properties"/>
+        </move>
+        <assign value="123456">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/sequence"/>
+        </assign>
+        <assign value="OFS">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/action"/>
+        </assign>
+        <assign value="RATANAK.L">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/un"/>
+        </assign>
+        <assign value="ASDFgh45">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/pw"/>
+        </assign>
+        <assign value="FUNDS.TRANSFER,WB.MB.QR.CODE">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/application"/>
+        </assign>
+        <assign value="I">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/function"/>
+        </assign>
+        <assign value="PROCESS">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/operation"/>
+        </assign>
+        <assign value="0">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/no.of.auth"/>
+        </assign>
+        <assign>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/record.id"/>
+        </assign>
+        <assign value="KH0010001">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/company"/>
+        </assign>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/senderAccount"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/DEBIT.ACCT.NO"/>
+        </move>
+        <assign value="MB-Bakong">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/DEBIT.THEIR.REF"/>
+        </assign>
+        <assign value="MB-Bakong">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CREDIT.THEIR.REF"/>
+        </assign>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/tranCurrency"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CREDIT.CURRENCY"/>
+        </move>
+        <assign value="20240904">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CREDIT.VALUE.DATE"/>
+        </assign>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/receiverName"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/BKG.CU.NAME"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/tranAmount"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CREDIT.AMOUNT"/>
+        </move>
+        <function ref="concat">
+            <input path="$MessageAssembly/JSON/spath('Data',2)/fee_currency" var="fee_currency"/>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/fee_amount" var="fee_amount"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CHARGE.AMT"/>
+            <param name="input" value="$fee_currency"/>
+        </function>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/senderAccount" var="senderAccount"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CHARGES.ACCT.NO"/>
+        </move>
+        <assign value="MTB">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/VF.TRN.TYPE"/>
+        </assign>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/merchantType" var="merchantType"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/WB.QR.MCHT.TYPE"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/purposeOther" var="purposeOther"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/WB.PURPOSE.OTH"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/senderAccountCcy"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/DEBIT.CURRENCY"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/receiverAccountId" var="receiverAccountId"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/BKG.AC.PHONE"/>
+        </move>
+        <function ref="substring">
+            <input path="$MessageAssembly/JSON/spath('Data',2)/purpose" var="purpose"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/WB.PURPOSE"/>
+            <param name="input" value="$purpose"/>
+            <property key="delimiter" value="-"/>
+            <property key="index" value="0"/>
+        </function>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/receiverAccountId"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/BKG.AC.ID"/>
+        </move>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/serviceId"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/BILLER.CODE"/>
+        </move>
+        <assign value="&quot;&quot;">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/TRANSACTION.TYPE"/>
+        </assign>
+        <assign value="&quot;&quot;">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/BK.ORG.NAME"/>
+        </assign>
+        <move>
+            <input path="$MessageAssembly/JSON/spath('Data',2)/receiverAccountId"/>
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/CREDIT.ACCT.NO"/>
+        </move>
+        <assign value="20240904">
+            <output path="$MessageAssembly1/JSON/spath('Data',2)/parameters/fields/DEBIT.VALUE.DATE"/>
+        </assign>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+ 
+    <!-- Define the root element -->
+<xs:element name="Document">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="BizDate" type="xs:date" />
+<xs:element name="BizTime" type="xs:time" />
+<xs:element name="myBankID" type="xs:string" />
+<xs:element name="BakongAccountUSD" type="xs:string" />
+<xs:element name="BakongAccountKHR" type="xs:string" />
+<xs:element name="BakongBalanceUSD" type="xs:decimal" />
+<xs:element name="BakongBalanceKHR" type="xs:decimal" />
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+ 
+</xs:schema>

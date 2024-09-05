@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "sequence": {
+      "type": "string"
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "record_id": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "object",
+          "properties": {
+            "@ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "MSG_ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "PMTINF_ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "PMTMTHD": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TXN_TYPE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_WALLET_AC_ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_NAME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEBIT_CURRENCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "DEBIT_ACCOUNT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "DEBIT_AMOUNT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_WALLET_AC_ID": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_NAME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CREDIT_CURRENCY": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "CREDIT_ACCOUNT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                },
+                "enr": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val",
+                "enr"
+              ]
+            },
+            "CREDIT_AMOUNT": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TXN_DATE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "TXN_HASH": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CURR_NO": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "INPUTTER": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DATE_TIME": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "AUTHORISER": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "CO_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            },
+            "DEPT_CODE": {
+              "type": "object",
+              "properties": {
+                "val": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "val"
+              ]
+            }
+          },
+          "required": [
+            "@ID",
+            "ID",
+            "MSG_ID",
+            "PMTINF_ID",
+            "PMTMTHD",
+            "TXN_TYPE",
+            "DEBIT_WALLET_AC_ID",
+            "DEBIT_NAME",
+            "DEBIT_CURRENCY",
+            "DEBIT_ACCOUNT",
+            "DEBIT_AMOUNT",
+            "CREDIT_WALLET_AC_ID",
+            "CREDIT_NAME",
+            "CREDIT_CURRENCY",
+            "CREDIT_ACCOUNT",
+            "CREDIT_AMOUNT",
+            "TXN_DATE",
+            "TXN_HASH",
+            "CURR_NO",
+            "INPUTTER",
+            "DATE_TIME",
+            "AUTHORISER",
+            "CO_CODE",
+            "DEPT_CODE"
+          ]
+        },
+        "ret_code": {
+          "type": "string"
+        },
+        "ret_message": {
+          "type": "string"
+        },
+        "new_record": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "record_id",
+        "fields",
+        "ret_code",
+        "ret_message",
+        "new_record"
+      ]
+    }
+  },
+  "required": [
+    "sequence",
+    "result"
+  ]
+}

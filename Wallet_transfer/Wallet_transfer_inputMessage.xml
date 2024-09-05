@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessagePool xmlns="http://wwww.ibm.com/iib/test/1.0.0">
+    <InputMessage timestamp="1725440362615" nodeId="FCMComposite_1_1" name="new message 1" id="1725440362615-6">
+        <plainText>%7B%0D%0A++++%22senderAccount%22%3A+%2225650999%22%2C%0D%0A++++%22receiverAccountId%22%3A+%22veasnauch%40wbfm%22%2C%0D%0A++++%22receiverName%22%3A+%22Not+Verified%22%2C%0D%0A++++%22tranAmount%22%3A+%2210000%22%2C%0D%0A++++%22tranCurrency%22%3A+%22KHR%22%2C%0D%0A++++%22purpose%22%3A+%22BUS.PUR%22%2C%0D%0A++++%22purposeOther%22%3A+%22%22%2C%0D%0A++++%22fee_currency%22%3A+%22USD%22%2C%0D%0A++++%22fee_amount%22%3A+%220.0%22%2C%0D%0A++++%22senderName%22%3A+%22Title-1+%22%2C%0D%0A++++%22serviceId%22%3A+%22BKN001_001%22%2C%0D%0A++++%22merchantType%22%3A+%22%22%2C%0D%0A++++%22qrCode%22%3A+null%2C%0D%0A++++%22company%22%3A+%22KH0010141%22%2C%0D%0A++++%22senderAccountCcy%22%3A+%22USD%22%0D%0A%7D</plainText>
+    </InputMessage>
+</MessagePool>

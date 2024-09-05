@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "sequence": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "un": {
+      "type": "string"
+    },
+    "pw": {
+      "type": "string"
+    },
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "application": {
+          "type": "string"
+        },
+        "function": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string"
+        },
+        "no.of.auth": {
+          "type": "string"
+        },
+        "record.id": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "object",
+          "properties": {
+            "DEBIT.ACCT.NO": {
+              "type": "string"
+            },
+            "DEBIT.VALUE.DATE": {
+              "type": "string"
+            },
+            "DEBIT.THEIR.REF": {
+              "type": "string"
+            },
+            "CREDIT.THEIR.REF": {
+              "type": "string"
+            },
+            "CREDIT.ACCT.NO": {
+              "type": "string"
+            },
+            "CREDIT.CURRENCY": {
+              "type": "string"
+            },
+            "CREDIT.VALUE.DATE": {
+              "type": "string"
+            },
+            "BKG.AC.PHONE": {
+              "type": "string"
+            },
+            "BKG.AC.ID": {
+              "type": "string"
+            },
+            "BKG.CU.NAME": {
+              "type": "string"
+            },
+            "CREDIT.AMOUNT": {
+              "type": "string"
+            },
+            "CHARGE.AMT": {
+              "type": "string"
+            },
+            "CHARGES.ACCT.NO": {
+              "type": "string"
+            },
+            "VF.TRN.TYPE": {
+              "type": "string"
+            },
+            "BILLER.CODE": {
+              "type": "string"
+            },
+            "WB.QR.MCHT.TYPE": {
+              "type": "string"
+            },
+            "TRANSACTION.TYPE": {
+              "type": "string"
+            },
+            "BK.ORG.NAME": {
+              "type": "string"
+            },
+            "WB.PURPOSE": {
+              "type": "string"
+            },
+            "WB.PURPOSE.OTH": {
+              "type": "string"
+            },
+            "DEBIT.CURRENCY": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "DEBIT.ACCT.NO",
+            "DEBIT.VALUE.DATE",
+            "DEBIT.THEIR.REF",
+            "CREDIT.THEIR.REF",
+            "CREDIT.ACCT.NO",
+            "CREDIT.CURRENCY",
+            "CREDIT.VALUE.DATE",
+            "BKG.AC.PHONE",
+            "BKG.AC.ID",
+            "BKG.CU.NAME",
+            "CREDIT.AMOUNT",
+            "CHARGE.AMT",
+            "CHARGES.ACCT.NO",
+            "VF.TRN.TYPE",
+            "BILLER.CODE",
+            "WB.QR.MCHT.TYPE",
+            "TRANSACTION.TYPE",
+            "BK.ORG.NAME",
+            "WB.PURPOSE",
+            "WB.PURPOSE.OTH",
+            "DEBIT.CURRENCY"
+          ]
+        }
+      },
+      "required": [
+        "application",
+        "function",
+        "operation",
+        "no.of.auth",
+        "record.id",
+        "company",
+        "fields"
+      ]
+    }
+  },
+  "required": [
+    "sequence",
+    "action",
+    "un",
+    "pw",
+    "parameters"
+  ]
+}
