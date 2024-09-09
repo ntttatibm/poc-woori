@@ -115,4 +115,11 @@
 		<nature>com.ibm.etools.msgbroker.tooling.applicationNature</nature>
 		<nature>com.ibm.etools.msgbroker.tooling.messageBrokerProjectNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>pain00100105.xsd</name>
+			<type>1</type>
+			<location>D:/workspace/ace/poc/pain00100105.xsd</location>
+		</link>
+	</linkedResources>
 </projectDescription>

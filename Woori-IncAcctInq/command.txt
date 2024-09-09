@@ -1,21 +1,22 @@
 ### prepare environment
-$ export REGISTRY_URL=https://${REGISTRY_NAME}
-$ export REGISTRY_NAME=registry.woori.com
-$ export REPOSITORY_NAME=ace_poc
-$ export IMAGE_TAG=v0.1
-$ export IMAGE_NAME=${REGISTRY_NAME}/${REPOSITORY_NAME}/poc_woori_incacctinq:${IMAGE_TAG}
-$ export REGISTRY_USERNAME=test124
-$ export REGISTRY_PASSWORD=abcd235
+export REGISTRY_NAME=docker.io
+export REGISTRY_URL=https://${REGISTRY_NAME}
+export REPOSITORY_NAME=nhantttibm/woori-poc-incacctinquir
+export IMAGE_TAG=v0.1
+export IMAGE_NAME=${REGISTRY_NAME}/${REPOSITORY_NAME}:${IMAGE_TAG}
+export REGISTRY_USERNAME=nhantttibm
+export REGISTRY_PASSWORD=QAJ3hjb8ueq5vqt@tzj
 $ export OCP_URL=https://api.woori-ocp.com:6443
 $ export OCP_USERNAME=test124
 $ export OCP_PASSWORD=abcd235
 $ export OCP_PROJECT_NAME=poc-ace
 
 ### build Docker image
-$ docker build --no-cache -t ${IMAGE_NAME} -f docker/Dockerile .
+$ sudo docker login ${REGISTRY_URL} -u ${REGISTRY_USERNAME} -p ${REGISTRY_PASSWORD}
+$ sudo docker build --no-cache -t ${IMAGE_NAME} -f docker/Dockerfile .
 
 ### push image to image registry
-$ docker login ${REGISTRY_URL} -u ${REGISTRY_USERNAME} -p ${REGISTRY_PASSWORD}
+$ 
 $ docker push ${IMAGE_NAME}
 
 ### deploy to OCP

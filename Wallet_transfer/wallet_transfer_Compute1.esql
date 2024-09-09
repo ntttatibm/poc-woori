@@ -19,10 +19,8 @@ CREATE COMPUTE MODULE wallet_transfer_Compute1
 	END;
 
 	CREATE PROCEDURE ConstructMessage() BEGIN
-		-- SET OutputRoot = InputRoot;
-		DECLARE castTime DATE;
-		SET castTime = CAST(CURRENT_DATE AS DATE FORMAT 'YYYYMMDD');
-
+		DECLARE castTime CHARACTER;
+		SET castTime = CAST(CURRENT_DATE AS CHARACTER FORMAT 'YYYYMMdd');
 
 		SET OutputRoot.JSON.Data.sequence = '123456';
 		SET OutputRoot.JSON.Data.action = 'OFS';
